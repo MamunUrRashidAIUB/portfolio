@@ -39,9 +39,9 @@
                 <p>Manage apps using the Flutter framework.</p>
             </div>
             <div class="service">
-                <img src="images/23.png" alt="Icon representing Flutter app development">
+                <img src="images/23.png" alt="Icon representing interface design with Figma">
                 <h2>Figma</h2>
-                <p> Collaborative web application for interface design, with additional offline features enabled by desktop applications for macOS and Windows. </p>
+                <p>Collaborative web application for interface design, with additional offline features enabled by desktop applications for macOS and Windows.</p>
             </div>
         </div>
 
@@ -49,6 +49,17 @@
             <h2>My Work and Projects</h2>
             <!-- Add project content here -->
         </div>
+        <div class="contact-form" id="contact-form">
+    <h3>Enter your email address</h3>
+    <input type="email" id="email" placeholder="Your email" required>
+    
+    <h3>Your Message</h3>
+    <textarea id="message" placeholder="Type your message here..." required></textarea>
+    
+    <button id="send-button">Send</button>
+</div>
+
+
     </div>
 
     <script src="script.js"></script>

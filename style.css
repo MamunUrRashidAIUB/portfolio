@@ -137,3 +137,25 @@ h1 {
         font-size: 24px;
     }
 }
+.contact-form {
+    margin-top: 20px;
+}
+
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #5d279b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
