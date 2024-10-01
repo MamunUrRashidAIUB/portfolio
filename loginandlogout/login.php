@@ -3,7 +3,7 @@ session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Replace with your actual login credentials
     $adminUsername = 'admin';
-    $adminPassword = 'password123'; // Ensure to use hashing for secure login in real-world scenarios.
+    $adminPassword = '123'; // Ensure to use hashing for secure login in real-world scenarios.
 
     $username = $_POST['username'];
     $password = $_POST['password'];
