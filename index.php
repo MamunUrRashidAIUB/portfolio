@@ -29,12 +29,12 @@
 
         <div class="services">
             <div class="service">
-                <img src="/api/placeholder/100/100" alt="Icon representing front-end development services">
+                <img src="images/1.png" alt="Icon representing front-end development services">
                 <h2>Front-end development</h2>
                 <p>Responsive websites built for an optimal user experience that achieves your business goals.</p>
             </div>
             <div class="service">
-                <img src="/api/placeholder/100/100" alt="Icon representing Flutter app development">
+                <img src="images/2.png" alt="Icon representing Flutter app development">
                 <h2>Flutter developer</h2>
                 <p>Manage apps using the Flutter framework.</p>
             </div>
