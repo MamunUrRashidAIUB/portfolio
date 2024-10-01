@@ -1,3 +1,7 @@
+<?php
+session_start();
+$adminLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +22,12 @@
                 <a href="#testimonials">Testimonials</a>
                 <a href="#blog">Blog</a>
                 <a href="#contact" class="cta-button">Get in Touch</a>
+                 <!-- Conditional Login/Logout button -->
+                 <?php if ($adminLoggedIn): ?>
+                    <a href="logout.php" class="login-button">Logout</a>
+                <?php else: ?>
+                    <a href="login.php" class="login-button">Login</a>
+                <?php endif; ?>
             </nav>
         </header>
 
@@ -65,7 +75,7 @@ Even the all-powerful Pointing has no control about the blind texts it is an alm
         </div>
 
         <div class="projects" id="blog">
-            <h2>Blog</h2>
+            <h2>Blog</h2> 
             <p>Figma: A Powerful Design Tool for the Modern Era</p>
             <p>Figma has rapidly become a go-to tool for designers and teams worldwide. Its cloud-based platform and real-time collaboration features have revolutionized the way designers work together. Let's explore why Figma has gained such popularity and how it can benefit your design process.</p>
         </div>
