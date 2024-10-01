@@ -49,6 +49,21 @@
             <h2>My Work and Projects</h2>
             <!-- Add project content here -->
         </div>
+        <div class="projects" id="about">
+            <h2>About Me</h2>
+            <p>Your about section content goes here.</p>
+        </div>
+
+        <div class="projects" id="testimonials">
+            <h2>Testimonials</h2>
+            <p>Your testimonials section content goes here.</p>
+        </div>
+
+        <div class="projects" id="blog">
+            <h2>Blog</h2>
+            <p>Your blog section content goes here.</p>
+        </div>
+
         <div class="contact-form" id="contact-form">
     <h3>Enter your email address</h3>
     <input type="email" id="email" placeholder="Your email" required>
