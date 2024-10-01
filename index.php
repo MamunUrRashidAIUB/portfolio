@@ -1,4 +1,5 @@
 <?php
+require 'connection/db_connect.php';
 session_start();
 $adminLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true;
 
@@ -9,11 +10,19 @@ if (!isset($_SESSION['blog_posts'])) {
 
 // Handle new blog post submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $adminLoggedIn) {
+    $newTitle = htmlspecialchars($_POST['new_blog_title']);
     $newPost = htmlspecialchars($_POST['new_blog_post']);
-    if (!empty($newPost)) {
-        $_SESSION['blog_posts'][] = $newPost; // Store new post in session
+    if (!empty($newPost) && !empty($newTitle)) {
+        // Prepare an SQL statement to prevent SQL injection
+        $stmt = $conn->prepare("INSERT INTO blogs (title, content) VALUES (?, ?)");
+        $stmt->bind_param("ss", $newTitle, $newPost);
+        $stmt->execute();
+        $stmt->close();
     }
 }
+// Fetch blog posts
+$sql = "SELECT * FROM blogs ORDER BY created_at DESC";
+$result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -85,30 +94,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $adminLoggedIn) {
             <p>Bachelor Degree of Computer Science</p>
             <p>American International University Bangladesh</p>
         </div>
-
-        <div class="projects" id="blog">
+<!-- blog section -->
+<div class="projects" id="blog">
             <h2>Blog</h2> 
             <?php if ($adminLoggedIn): ?>
                 <div class="blog-posting">
                     <h3>Post a New Blog</h3>
                     <form method="POST" action="">
+                        <input type="text" name="new_blog_title" placeholder="Blog Title" required>
                         <textarea name="new_blog_post" placeholder="Type your blog post here..." required></textarea>
                         <button type="submit">Post Blog</button>
                     </form>
                 </div>
             <?php endif; ?>
 
-            <?php if (count($_SESSION['blog_posts']) > 0): ?>
-                <?php foreach ($_SESSION['blog_posts'] as $post): ?>
+            <?php if ($result->num_rows > 0): ?>
+                <?php while ($row = $result->fetch_assoc()): ?>
                     <div class="blog-post">
-                        <p><?php echo nl2br($post); ?></p>
+                        <h3><?php echo htmlspecialchars($row['title']); ?></h3>
+                        <p><?php echo nl2br(htmlspecialchars($row['content'])); ?></p>
+                        <small>Posted on: <?php echo $row['created_at']; ?></small>
                     </div>
-                <?php endforeach; ?>
+                <?php endwhile; ?>
             <?php else: ?>
                 <p>No blog posts available.</p>
             <?php endif; ?>
         </div>
-
+<!-- blog section end -->
         <div class="contact-form" id="contact-form">
             <h3>Enter your email address</h3>
             <input type="email" id="email" placeholder="Your email" required>
