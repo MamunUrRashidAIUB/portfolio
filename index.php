@@ -66,7 +66,8 @@ Even the all-powerful Pointing has no control about the blind texts it is an alm
 
         <div class="projects" id="blog">
             <h2>Blog</h2>
-            <p>Your blog section content goes here.</p>
+            <p>Figma: A Powerful Design Tool for the Modern Era</p>
+            <p>Figma has rapidly become a go-to tool for designers and teams worldwide. Its cloud-based platform and real-time collaboration features have revolutionized the way designers work together. Let's explore why Figma has gained such popularity and how it can benefit your design process.</p>
         </div>
 
         <div class="contact-form" id="contact-form">
