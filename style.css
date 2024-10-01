@@ -33,16 +33,16 @@ nav a {
     margin-left: 20px;
     text-decoration: none;
     color: white;
-    padding: 10px; /* Add consistent padding to all links */
+    padding: 10px;
 }
 
 .cta-button {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 20px; /* Ensure the padding matches with other links */
+    padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    margin-left: 20px; /* Ensure same margin for proper spacing */
+    margin-left: 20px;
 }
 
 h1 {
@@ -57,14 +57,16 @@ h1 {
 
 .services {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* Evenly space the service sections */
     margin-top: 50px;
     flex-wrap: wrap;
+    gap: 20px; /* Add some space between items */
 }
 
 .service {
     text-align: center;
-    width: 45%;
+    width: calc(33.33% - 20px); /* Divide the width equally for 3 services */
+    box-sizing: border-box;
 }
 
 .service img {
@@ -85,6 +87,7 @@ h1 {
     cursor: pointer;
 }
 
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .nav-menu {
         display: none;
@@ -110,6 +113,15 @@ h1 {
         margin: 10px 0;
         text-align: center;
     }
+
+    .services {
+        flex-direction: column; /* Stack services vertically */
+    }
+
+    .service {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -119,10 +131,6 @@ h1 {
 
     .logo {
         font-size: 20px;
-    }
-
-    .service {
-        width: 100%;
     }
 
     h1 {

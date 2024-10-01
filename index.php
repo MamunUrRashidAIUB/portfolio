@@ -38,6 +38,11 @@
                 <h2>Flutter developer</h2>
                 <p>Manage apps using the Flutter framework.</p>
             </div>
+            <div class="service">
+                <img src="images/2.png" alt="Icon representing Flutter app development">
+                <h2>Flutter developer</h2>
+                <p>Manage apps using the Flutter framework.</p>
+            </div>
         </div>
 
         <div class="projects">
