@@ -29,19 +29,19 @@
 
         <div class="services">
             <div class="service">
-                <img src="images/1.png" alt="Icon representing front-end development services">
+                <img src="images/25.png" alt="Icon representing front-end development services">
                 <h2>Front-end development</h2>
                 <p>Responsive websites built for an optimal user experience that achieves your business goals.</p>
             </div>
             <div class="service">
-                <img src="images/2.png" alt="Icon representing Flutter app development">
+                <img src="images/12.png" alt="Icon representing Flutter app development">
                 <h2>Flutter developer</h2>
                 <p>Manage apps using the Flutter framework.</p>
             </div>
             <div class="service">
-                <img src="images/2.png" alt="Icon representing Flutter app development">
-                <h2>Flutter developer</h2>
-                <p>Manage apps using the Flutter framework.</p>
+                <img src="images/23.png" alt="Icon representing Flutter app development">
+                <h2>Figma</h2>
+                <p> Collaborative web application for interface design, with additional offline features enabled by desktop applications for macOS and Windows. </p>
             </div>
         </div>
 
