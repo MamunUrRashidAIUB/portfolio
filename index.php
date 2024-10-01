@@ -8,7 +8,7 @@ $adminLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rashid - Front-end Developer</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
     <div class="container">
@@ -93,6 +93,6 @@ Even the all-powerful Pointing has no control about the blind texts it is an alm
 
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
