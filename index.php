@@ -101,7 +101,7 @@ $result = $conn->query($sql);
                 <div class="blog-posting">
                     <h3>Post a New Blog</h3>
                     <form method="POST" action="">
-                        <input type="text" name="new_blog_title" placeholder="Blog Title" required>
+                        <input type="text" name="new_blog_title" placeholder="Blog Title" required><br><br>
                         <textarea name="new_blog_post" placeholder="Type your blog post here..." required></textarea>
                         <button type="submit">Post Blog</button>
                     </form>
