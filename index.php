@@ -24,9 +24,9 @@ $adminLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_
                 <a href="#contact" class="cta-button">Get in Touch</a>
                  <!-- Conditional Login/Logout button -->
                  <?php if ($adminLoggedIn): ?>
-                    <a href="logout.php" class="login-button">Logout</a>
+                    <a href="loginandlogout/logout.php" class="login-button">Logout</a>
                 <?php else: ?>
-                    <a href="login.php" class="login-button">Login</a>
+                    <a href="loginandlogout/login.php" class="login-button">Login</a>
                 <?php endif; ?>
             </nav>
         </header>

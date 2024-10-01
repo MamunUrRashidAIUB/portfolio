@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($username === $adminUsername && $password === $adminPassword) {
         // Store login information in session
         $_SESSION['admin_logged_in'] = true;
-        header('Location: index.php');
+        header('Location: ../index.php');
         exit();
     } else {
         echo "Invalid login credentials!";
