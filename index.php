@@ -29,7 +29,7 @@ $result = $conn->query($sql);
 // Handle delete blog post
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_post_id']) && $adminLoggedIn) {
     $deletePostId = intval($_POST['delete_post_id']);
-    
+
     // Prepare and execute the DELETE SQL statement
     $stmt = $conn->prepare("DELETE FROM blogs WHERE id = ?");
     $stmt->bind_param("i", $deletePostId);
@@ -133,36 +133,50 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_post_id']) && 
             <?php endif; ?>
 
             <?php if ($result->num_rows > 0): ?>
-    <?php while ($row = $result->fetch_assoc()): ?>
-        <div class="blog-post">
-            <h3><?php echo htmlspecialchars($row['title']); ?></h3>
-            <p><?php echo nl2br(htmlspecialchars($row['content'])); ?></p>
-            <small>Posted on: <?php echo $row['created_at']; ?></small>
-            
-            <?php if ($adminLoggedIn): ?>
-                <!-- Delete Button -->
-                <form method="POST" action="" style="display:inline;">
-                    <input type="hidden" name="delete_post_id" value="<?php echo $row['id']; ?>">
-                    <button type="submit" onclick="return confirm('Are you sure you want to delete this blog post?')">Delete</button>
-                </form>
+                <?php while ($row = $result->fetch_assoc()): ?>
+                    <div class="blog-post">
+                        <h3><?php echo htmlspecialchars($row['title']); ?></h3>
+                        <p><?php echo nl2br(htmlspecialchars($row['content'])); ?></p>
+                        <small>Posted on: <?php echo $row['created_at']; ?></small>
+
+                        <?php if ($adminLoggedIn): ?>
+                            <!-- Delete Button -->
+                            <form method="POST" action="" style="display:inline;">
+                                <input type="hidden" name="delete_post_id" value="<?php echo $row['id']; ?>">
+                                <button type="submit"
+                                    onclick="return confirm('Are you sure you want to delete this blog post?')">Delete</button>
+                            </form>
+                        <?php endif; ?>
+                    </div>
+                <?php endwhile; ?>
+            <?php else: ?>
+                <p>No blog posts available.</p>
             <?php endif; ?>
-        </div>
-    <?php endwhile; ?>
-<?php else: ?>
-    <p>No blog posts available.</p>
-<?php endif; ?>
 
         </div>
         <!-- blog section end -->
-        <div class="contact-form" id="contact-form">
-            <h3>Enter your email address</h3>
-            <input type="email" id="email" placeholder="Your email" required>
-
-            <h3>Your Message</h3>
-            <textarea id="message" placeholder="Type your message here..." required></textarea>
-
-            <button id="send-button">Send</button>
+       <!-- Replace this section -->
+<div class="footer" id="contact">
+    <div class="footer-container">
+        <div class="footer-text">
+            <h3>Let’s Talk</h3>
+            <p>Every project starts with a chat. I will be happy to discuss your project.</p>
         </div>
+        <div class="footer-contact">
+            <p>Email: <a href="mailto:md.mamun.ur.rashid.cse@gmail.com">md.mamun.ur.rashid.cse@gmail.com</a></p>
+            <p>Phone: 01880299555<br>01729402303</p>
+            <p>Address: Bashundhara, Block C, Road 8, Dhaka</p>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img src="images/icons8-facebook-48.png" alt="Facebook"></a>
+            <a href="#"><img src="images/icons8-linkedin-48.png" alt="LinkedIn"></a>
+            <a href="#"><img src="images/icons8-youtube-48.png" alt="YouTube"></a>
+            <a href="#"><img src="images/icons8-whatsapp-48.png" alt="WhatsApp"></a>
+            <a href="#"><img src="images/icons8-instagram-48.png" alt="Instagram"></a>
+        </div>
+    </div>
+</div>
+
     </div>
 
     <script src="js/script.js"></script>

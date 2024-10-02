@@ -310,3 +310,34 @@ html {
     display: block;
     margin-bottom: 5px;
 }
+.footer {
+    background-color: #686c80; /* Light gray background */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-text h3 {
+    font-weight: bold;
+}
+
+.footer-contact p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.footer-social a img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.footer-social a {
+    text-decoration: none;
+}
