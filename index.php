@@ -55,10 +55,12 @@ $result = $conn->query($sql);
         </header>
         <div class="who-am-i-section" id="about">
     <div class="who-am-i-container">
+      
         <div class="who-am-i-image">
             <img src="images/55.jpeg" alt="Image of Rashid">
         </div>
         <div class="who-am-i-text">
+            
             <p>Hi, I'm Rashid. On her way, she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. Even the all-powerful Pointing has no control over the blind texts; it is an almost unorthographic life. One day, however, a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
         </div>
     </div>
