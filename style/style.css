@@ -212,3 +212,52 @@ html {
     border-radius: 4px;
     background-color: #22203a;
 }
+.who-am-i-section {
+    background-color: #292b35; /* Light blue background */
+    padding: 40px;
+    margin-top: 50px;
+    color: white;
+}
+
+.who-am-i-section h2 {
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.who-am-i-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.who-am-i-image img {
+    width: 300px; /* Adjust based on the image size you prefer */
+    height: auto;
+    border-radius: 8px;
+}
+
+.who-am-i-text {
+    max-width: 60%;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .who-am-i-container {
+        flex-direction: column; /* Stack the image and text vertically on smaller screens */
+        text-align: center;
+    }
+
+    .who-am-i-text {
+        max-width: 100%;
+    }
+
+    .who-am-i-image img {
+        width: 100%; /* Make the image take full width on smaller screens */
+        height: auto;
+    }
+}

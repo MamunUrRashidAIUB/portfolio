@@ -42,7 +42,7 @@ $result = $conn->query($sql);
                 <a href="#home">Home</a>
                 <a href="#portfolio">Portfolio</a>
                 <a href="#about">About</a>
-                <a href="#testimonials">Testimonials</a>
+                <a href="#testimonials">Education</a>
                 <a href="#blog">Blog</a>
                 <a href="#contact" class="cta-button">Get in Touch</a>
                 <!-- Conditional Login/Logout button -->
@@ -83,11 +83,19 @@ $result = $conn->query($sql);
             <!-- Add project content here -->
         </div>
         
-        <div class="projects" id="about">
-            <h2>WHO AM I ?</h2>
-            <p>Hi I'm Jackson Ford On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country.
-            Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+        <!-- WHO AM I Section -->
+<div class="who-am-i-section" id="about">
+    <h2>WHO AM I?</h2>
+    <div class="who-am-i-container">
+        <div class="who-am-i-image">
+            <img src="images/55.jpeg" alt="Image of Rashid">
         </div>
+        <div class="who-am-i-text">
+            <p>Hi, I'm Rashid. On her way, she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. Even the all-powerful Pointing has no control over the blind texts; it is an almost unorthographic life. One day, however, a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+        </div>
+    </div>
+</div>
+
 
         <div class="projects" id="testimonials">
             <h2>EDUCATION</h2>
