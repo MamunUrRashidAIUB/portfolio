@@ -40,7 +40,7 @@ $result = $conn->query($sql);
             <button class="menu-toggle" aria-label="Open navigation menu">☰</button>
             <nav class="nav-menu">
                 <a href="#home">Home</a>
-                <a href="#portfolio">Portfolio</a>
+               
                 <a href="#about">About</a>
                 <a href="#testimonials">Education</a>
                 <a href="#blog">Blog</a>
@@ -65,11 +65,30 @@ $result = $conn->query($sql);
         </div>
     </div>
 </div>
-        <div class="projects" id="testimonials">
+        <!-- <div class="projects" id="testimonials">
             <h2>EDUCATION </h2>
             <p>Bachelor Degree of Computer Science</p>
             <p>American International University Bangladesh</p>
-        </div>
+        </div> -->
+        <div class="education-section" id="testimonials">
+    <h2>Education</h2>
+    <div class="education-item">
+        <p><strong>2022-2025</strong></p>
+        <p>Bachelor Degree of Computer Science</p>
+        <p>American International University Bangladesh</p>
+    </div>
+    <div class="education-item">
+        <p><strong>2018-2020</strong></p>
+        <p>Science</p>
+        <p>Bangladesh Navy College</p>
+    </div>
+    <div class="education-item">
+        <p><strong>2016-2018</strong></p>
+        <p>Science</p>
+        <p>Nasirabad Govt. High School, Chattogram</p>
+    </div>
+</div>
+
 <!-- blog section -->
 <div class="projects" id="blog">
             <h2>Blog</h2> 
