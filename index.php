@@ -9,9 +9,11 @@ if (!isset($_SESSION['blog_posts'])) {
 }
 
 // Handle new blog post submission
+// Handle new blog post submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $adminLoggedIn) {
-    $newTitle = htmlspecialchars($_POST['new_blog_title']);
-    $newPost = htmlspecialchars($_POST['new_blog_post']);
+    $newTitle = isset($_POST['new_blog_title']) ? htmlspecialchars($_POST['new_blog_title']) : '';
+    $newPost = isset($_POST['new_blog_post']) ? htmlspecialchars($_POST['new_blog_post']) : '';
+
     if (!empty($newPost) && !empty($newTitle)) {
         // Prepare an SQL statement to prevent SQL injection
         $stmt = $conn->prepare("INSERT INTO blogs (title, content) VALUES (?, ?)");
@@ -20,9 +22,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $adminLoggedIn) {
         $stmt->close();
     }
 }
+
 // Fetch blog posts
 $sql = "SELECT * FROM blogs ORDER BY created_at DESC";
 $result = $conn->query($sql);
+// Handle delete blog post
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_post_id']) && $adminLoggedIn) {
+    $deletePostId = intval($_POST['delete_post_id']);
+    
+    // Prepare and execute the DELETE SQL statement
+    $stmt = $conn->prepare("DELETE FROM blogs WHERE id = ?");
+    $stmt->bind_param("i", $deletePostId);
+    $stmt->execute();
+    $stmt->close();
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -95,7 +109,7 @@ $result = $conn->query($sql);
             <div class="education-item">
                 <p><strong>2018-2020</strong></p>
                 <p>Science</p>
-                <p>Bangladesh Navy College</p>
+                <p>Bangladesh Navy College, Chattogram</p>
             </div>
             <div class="education-item">
                 <p><strong>2016-2018</strong></p>
@@ -119,16 +133,25 @@ $result = $conn->query($sql);
             <?php endif; ?>
 
             <?php if ($result->num_rows > 0): ?>
-                <?php while ($row = $result->fetch_assoc()): ?>
-                    <div class="blog-post">
-                        <h3><?php echo htmlspecialchars($row['title']); ?></h3>
-                        <p><?php echo nl2br(htmlspecialchars($row['content'])); ?></p>
-                        <small>Posted on: <?php echo $row['created_at']; ?></small>
-                    </div>
-                <?php endwhile; ?>
-            <?php else: ?>
-                <p>No blog posts available.</p>
+    <?php while ($row = $result->fetch_assoc()): ?>
+        <div class="blog-post">
+            <h3><?php echo htmlspecialchars($row['title']); ?></h3>
+            <p><?php echo nl2br(htmlspecialchars($row['content'])); ?></p>
+            <small>Posted on: <?php echo $row['created_at']; ?></small>
+            
+            <?php if ($adminLoggedIn): ?>
+                <!-- Delete Button -->
+                <form method="POST" action="" style="display:inline;">
+                    <input type="hidden" name="delete_post_id" value="<?php echo $row['id']; ?>">
+                    <button type="submit" onclick="return confirm('Are you sure you want to delete this blog post?')">Delete</button>
+                </form>
             <?php endif; ?>
+        </div>
+    <?php endwhile; ?>
+<?php else: ?>
+    <p>No blog posts available.</p>
+<?php endif; ?>
+
         </div>
         <!-- blog section end -->
         <div class="contact-form" id="contact-form">
