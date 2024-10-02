@@ -66,7 +66,7 @@ $result = $conn->query($sql);
     </div>
 </div>
         <div class="projects" id="testimonials">
-            <h2>EDUCATION A</h2>
+            <h2>EDUCATION </h2>
             <p>Bachelor Degree of Computer Science</p>
             <p>American International University Bangladesh</p>
         </div>
