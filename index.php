@@ -69,7 +69,14 @@ $result = $conn->query($sql);
                         wide range, from app and website design, where I utilize Figma for creative interfaces, to
                         backend development using programming languages like PHP, CSS, HTML, JavaScript, C++, and C#. I
                         have developed several personal and academic projects, including designing Windows Forms
-                        applications as part of my university coursework.</p>
+                        applications as part of my university coursework.My proficiency extends to working with
+                        databases, particularly using phpMyAdmin and MySQL, where I have gained a solid understanding of
+                        how to manage and maintain databases effectively. During my breaks from formal education, I
+                        dedicate time to learning new programming languages and honing my existing skills to stay ahead
+                        in the fast-evolving field of technology. Whether it’s web development, software design, or
+                        working on complex coding challenges, I’m always eager to dive deeper into these subjects,
+                        continuously aiming to expand my expertise and deliver high-quality solutions in every project I
+                        undertake.</p>
                 </div>
             </div>
         </div>
