@@ -174,7 +174,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_post_id']) && 
                     <a href="https://www.linkedin.com/in/md-mamun-ur-rashid-7a95ab251" target="_blank"><img src="images/icons8-linkedin-48.png" alt="LinkedIn"></a>
                     <a href="https://www.youtube.com/@MD.MamunUrRashid-vy2ej" target="_blank"><img src="images/icons8-youtube-48.png" alt="YouTube"></a>
                     <a href="https://wa.me/+8801880299555"target="_blank"><img src="images/icons8-whatsapp-48.png" alt="WhatsApp"></a>
-                    <a href="#"target="_blank"><img src="images/icons8-instagram-48.png" alt="Instagram"></a>
+                    <a href="https://github.com/MamunUrRashidAIUB"target="_blank"><img src="images/icons8-github-48.png" alt="Instagram"></a>
                 </div>
             </div>
         </div>
