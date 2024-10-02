@@ -65,15 +65,6 @@ $result = $conn->query($sql);
         </div>
     </div>
 </div>
-        <div class="projects">
-            <h2>My Work and Projects</h2>
-            <!-- Add project content here -->
-        </div>
-        
-       
-
-
-
         <div class="projects" id="testimonials">
             <h2>EDUCATION</h2>
             <p>Bachelor Degree of Computer Science</p>
