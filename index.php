@@ -27,12 +27,14 @@ $result = $conn->query($sql);
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rashid - Front-end Developer</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -40,7 +42,7 @@ $result = $conn->query($sql);
             <button class="menu-toggle" aria-label="Open navigation menu">☰</button>
             <nav class="nav-menu">
                 <a href="#home">Home</a>
-               
+
                 <a href="#about">About</a>
                 <a href="#testimonials">Education</a>
                 <a href="#blog">Blog</a>
@@ -54,44 +56,50 @@ $result = $conn->query($sql);
             </nav>
         </header>
         <div class="who-am-i-section" id="about">
-    <div class="who-am-i-container">
-      
-        <div class="who-am-i-image">
-            <img src="images/55.jpeg" alt="Image of Rashid">
+            <div class="who-am-i-container">
+
+                <div class="who-am-i-image">
+                    <img src="images/55.jpeg" alt="Image of Rashid">
+                </div>
+                <div class="who-am-i-text">
+
+                    <p>I am Mamun Ur Rashid, currently pursuing my degree in Computer Science and Engineering (CSE) at
+                        American International University, where I’m in my 9th semester. I have a deep passion for
+                        technology and always strive to learn and explore new concepts within CSE. My interests span a
+                        wide range, from app and website design, where I utilize Figma for creative interfaces, to
+                        backend development using programming languages like PHP, CSS, HTML, JavaScript, C++, and C#. I
+                        have developed several personal and academic projects, including designing Windows Forms
+                        applications as part of my university coursework.</p>
+                </div>
+            </div>
         </div>
-        <div class="who-am-i-text">
-            
-            <p>Hi, I'm Rashid. On her way, she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. Even the all-powerful Pointing has no control over the blind texts; it is an almost unorthographic life. One day, however, a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-        </div>
-    </div>
-</div>
         <!-- <div class="projects" id="testimonials">
             <h2>EDUCATION </h2>
             <p>Bachelor Degree of Computer Science</p>
             <p>American International University Bangladesh</p>
         </div> -->
         <div class="education-section" id="testimonials">
-    <h2>Education</h2>
-    <div class="education-item">
-        <p><strong>2022-2025</strong></p>
-        <p>Bachelor Degree of Computer Science</p>
-        <p>American International University Bangladesh</p>
-    </div>
-    <div class="education-item">
-        <p><strong>2018-2020</strong></p>
-        <p>Science</p>
-        <p>Bangladesh Navy College</p>
-    </div>
-    <div class="education-item">
-        <p><strong>2016-2018</strong></p>
-        <p>Science</p>
-        <p>Nasirabad Govt. High School, Chattogram</p>
-    </div>
-</div>
+            <h2>Education</h2>
+            <div class="education-item">
+                <p><strong>2022-2025</strong></p>
+                <p>Bachelor Degree of Computer Science</p>
+                <p>American International University Bangladesh</p>
+            </div>
+            <div class="education-item">
+                <p><strong>2018-2020</strong></p>
+                <p>Science</p>
+                <p>Bangladesh Navy College</p>
+            </div>
+            <div class="education-item">
+                <p><strong>2016-2018</strong></p>
+                <p>Science</p>
+                <p>Nasirabad Govt. High School, Chattogram</p>
+            </div>
+        </div>
 
-<!-- blog section -->
-<div class="projects" id="blog">
-            <h2>Blog</h2> 
+        <!-- blog section -->
+        <div class="projects" id="blog">
+            <h2>Blog</h2>
             <?php if ($adminLoggedIn): ?>
                 <div class="blog-posting">
                     <h3>Post a New Blog</h3>
@@ -115,18 +123,19 @@ $result = $conn->query($sql);
                 <p>No blog posts available.</p>
             <?php endif; ?>
         </div>
-<!-- blog section end -->
+        <!-- blog section end -->
         <div class="contact-form" id="contact-form">
             <h3>Enter your email address</h3>
             <input type="email" id="email" placeholder="Your email" required>
-            
+
             <h3>Your Message</h3>
             <textarea id="message" placeholder="Type your message here..." required></textarea>
-            
+
             <button id="send-button">Send</button>
         </div>
     </div>
 
     <script src="js/script.js"></script>
 </body>
+
 </html>

@@ -1,17 +1,17 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
 
-    menuToggle.addEventListener('click', function() {
+    menuToggle.addEventListener('click', function () {
         navMenu.classList.toggle('active');
     });
 
-    document.querySelector('.cta-button').addEventListener('click', function() {
+    document.querySelector('.cta-button').addEventListener('click', function () {
         const contactForm = document.getElementById('contact-form');
         contactForm.scrollIntoView({ behavior: 'smooth' });
     });
 
-    document.getElementById('send-button').addEventListener('click', function() {
+    document.getElementById('send-button').addEventListener('click', function () {
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
 

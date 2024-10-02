@@ -57,15 +57,18 @@ h1 {
 
 .services {
     display: flex;
-    justify-content: space-between; /* Evenly space the service sections */
+    justify-content: space-between;
+    /* Evenly space the service sections */
     margin-top: 50px;
     flex-wrap: wrap;
-    gap: 20px; /* Add some space between items */
+    gap: 20px;
+    /* Add some space between items */
 }
 
 .service {
     text-align: center;
-    width: calc(33.33% - 20px); /* Divide the width equally for 3 services */
+    width: calc(33.33% - 20px);
+    /* Divide the width equally for 3 services */
     box-sizing: border-box;
 }
 
@@ -115,11 +118,13 @@ h1 {
     }
 
     .services {
-        flex-direction: column; /* Stack services vertically */
+        flex-direction: column;
+        /* Stack services vertically */
     }
 
     .service {
-        width: 100%; /* Full width on smaller screens */
+        width: 100%;
+        /* Full width on smaller screens */
         margin-bottom: 20px;
     }
 }
@@ -137,6 +142,7 @@ h1 {
         font-size: 24px;
     }
 }
+
 .contact-form {
     margin-top: 20px;
 }
@@ -159,9 +165,11 @@ h1 {
     border-radius: 5px;
     cursor: pointer;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 /* Style for the login button */
 .login-button {
     background-color: #ffffff;
@@ -176,6 +184,7 @@ html {
 .login-button:hover {
     background-color: #2c4e69;
 }
+
 .blog-posting {
     margin: 20px 0;
     padding: 20px;
@@ -212,8 +221,10 @@ html {
     border-radius: 4px;
     background-color: #22203a;
 }
+
 .who-am-i-section {
-    background-color: #292b35; /* Light blue background */
+    background-color: #292b35;
+    /* Light blue background */
     padding: 40px;
     margin-top: 50px;
     color: white;
@@ -234,7 +245,8 @@ html {
 }
 
 .who-am-i-image img {
-    width: 300px; /* Adjust based on the image size you prefer */
+    width: 300px;
+    /* Adjust based on the image size you prefer */
     height: auto;
     border-radius: 8px;
 }
@@ -248,7 +260,8 @@ html {
 
 @media (max-width: 768px) {
     .who-am-i-container {
-        flex-direction: column; /* Stack the image and text vertically on smaller screens */
+        flex-direction: column;
+        /* Stack the image and text vertically on smaller screens */
         text-align: center;
     }
 
@@ -257,13 +270,15 @@ html {
     }
 
     .who-am-i-image img {
-        width: 100%; /* Make the image take full width on smaller screens */
+        width: 100%;
+        /* Make the image take full width on smaller screens */
         height: auto;
     }
 }
+
 .education-section {
     font-family: Arial, sans-serif;
-    color:white;
+    color: white;
     padding: 20px;
 }
 
@@ -276,11 +291,13 @@ html {
 .education-item {
     margin-bottom: 20px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #ccc; /* Light grey line between items */
+    border-bottom: 1px solid #ccc;
+    /* Light grey line between items */
 }
 
 .education-item:last-child {
-    border-bottom: none; /* Remove line after the last item */
+    border-bottom: none;
+    /* Remove line after the last item */
 }
 
 .education-item p {
