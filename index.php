@@ -155,27 +155,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_post_id']) && 
 
         </div>
         <!-- blog section end -->
-       <!-- Replace this section -->
-<div class="footer" id="contact">
-    <div class="footer-container">
-        <div class="footer-text">
-            <h3>Let’s Talk</h3>
-            <p>Every project starts with a chat. I will be happy to discuss your project.</p>
+        <!-- Replace this section -->
+        <div class="footer" id="contact">
+            <div class="footer-container">
+                <div class="footer-text">
+                    <h3>Let’s Talk</h3>
+                    <p>Every project starts with a chat. I will be happy to discuss your project.</p>
+                </div>
+                <div class="footer-contact">
+                    <p>Email: <a href="mailto:md.mamun.ur.rashid.cse@gmail.com">md.mamun.ur.rashid.cse@gmail.com</a></p>
+                    <p class="phone">Phone:
+                        01880299555, 
+                        01729402303</p>
+                    <p>Address: Bashundhara, Block C, Road 8, Dhaka</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=100026601601848" target="_blank"><img src="images/icons8-facebook-48.png" alt="Facebook" ></a>
+                    <a href="https://www.linkedin.com/in/md-mamun-ur-rashid-7a95ab251" target="_blank"><img src="images/icons8-linkedin-48.png" alt="LinkedIn"></a>
+                    <a href="https://www.youtube.com/@MD.MamunUrRashid-vy2ej" target="_blank"><img src="images/icons8-youtube-48.png" alt="YouTube"></a>
+                    <a href="https://wa.me/+8801880299555"target="_blank"><img src="images/icons8-whatsapp-48.png" alt="WhatsApp"></a>
+                    <a href="#"target="_blank"><img src="images/icons8-instagram-48.png" alt="Instagram"></a>
+                </div>
+            </div>
         </div>
-        <div class="footer-contact">
-            <p>Email: <a href="mailto:md.mamun.ur.rashid.cse@gmail.com">md.mamun.ur.rashid.cse@gmail.com</a></p>
-            <p>Phone: 01880299555<br>01729402303</p>
-            <p>Address: Bashundhara, Block C, Road 8, Dhaka</p>
-        </div>
-        <div class="footer-social">
-            <a href="#"><img src="images/icons8-facebook-48.png" alt="Facebook"></a>
-            <a href="#"><img src="images/icons8-linkedin-48.png" alt="LinkedIn"></a>
-            <a href="#"><img src="images/icons8-youtube-48.png" alt="YouTube"></a>
-            <a href="#"><img src="images/icons8-whatsapp-48.png" alt="WhatsApp"></a>
-            <a href="#"><img src="images/icons8-instagram-48.png" alt="Instagram"></a>
-        </div>
-    </div>
-</div>
 
     </div>
 
