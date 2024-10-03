@@ -311,9 +311,12 @@ html {
 
 .education-item {
     margin-bottom: 20px; /* Responsive margin */
-    padding-bottom: 20px; /* Responsive padding */
-    border-bottom: 1px solid #ccc; /* Separator */
+    padding: 20px; /* Padding inside the box */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #393d4d; /* Box background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
 }
+
 
 .education-item:last-child {
     border-bottom: none; /* Remove last separator */
@@ -331,12 +334,15 @@ html {
 }
 
 .footer {
-    background-color: #686c80; /* Light gray background */
+    background-color: #393d4d; /* Light gray background */
     padding: 20px;
     display: flex;
     flex-direction: column; /* Stack items vertically on mobile */
     align-items: center; /* Center items */
-    text-align: center; /* Center text for better alignment */
+    text-align: center; 
+    border-radius: 10px; /* Rounded corners */
+    background-color: #393d4d; /* Box background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth *//* Center text for better alignment */
 }
 
 .footer-container {
