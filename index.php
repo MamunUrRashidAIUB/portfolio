@@ -47,6 +47,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_post_id']) && 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rashid - Front-end Developer</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Kalnia+Glaze:wght@100..700&family=Nabla&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -77,24 +80,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_post_id']) && 
                 </div>
                 <div class="who-am-i-text">
 
-                    <p><h1>Hi, I'm Mamun Ur Rashid</h1>i'm currently pursuing my degree in Computer Science and Engineering (CSE) at
-                        American International University, where I’m in my 9th semester. I have a deep passion for
-                        technology and always strive to learn and explore new concepts within CSE. My interests span a
-                        wide range, from app and website design, where I utilize Figma for creative interfaces, to
-                        backend development using programming languages like PHP, CSS, HTML, JavaScript, C++, and C#. I
-                        have developed several personal and academic projects, including designing Windows Forms
-                        applications as part of my university coursework.My proficiency extends to working with
-                        databases, particularly using phpMyAdmin and MySQL, where I have gained a solid understanding of
-                        how to manage and maintain databases effectively. During my breaks from formal education, I
-                        dedicate time to learning new programming languages and honing my existing skills to stay ahead
-                        in the fast-evolving field of technology. Whether it’s web development, software design, or
-                        working on complex coding challenges, I’m always eager to dive deeper into these subjects,
-                        continuously aiming to expand my expertise and deliver high-quality solutions in every project I
-                        undertake.</p>
+                    <p>
+                    <h1>Hi, I'm Mamun Ur Rashid</h1>i'm currently pursuing my degree in Computer Science and Engineering
+                    (CSE) at
+                    American International University, where I’m in my 9th semester. I have a deep passion for
+                    technology and always strive to learn and explore new concepts within CSE. My interests span a
+                    wide range, from app and website design, where I utilize Figma for creative interfaces, to
+                    backend development using programming languages like PHP, CSS, HTML, JavaScript, C++, and C#. I
+                    have developed several personal and academic projects, including designing Windows Forms
+                    applications as part of my university coursework.My proficiency extends to working with
+                    databases, particularly using phpMyAdmin and MySQL, where I have gained a solid understanding of
+                    how to manage and maintain databases effectively. During my breaks from formal education, I
+                    dedicate time to learning new programming languages and honing my existing skills to stay ahead
+                    in the fast-evolving field of technology. Whether it’s web development, software design, or
+                    working on complex coding challenges, I’m always eager to dive deeper into these subjects,
+                    continuously aiming to expand my expertise and deliver high-quality solutions in every project I
+                    undertake.</p>
                 </div>
             </div>
         </div>
-      
+
         <div class="education-section" id="testimonials">
             <h2>Education</h2>
             <div class="education-item">
@@ -161,16 +166,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_post_id']) && 
                 <div class="footer-contact">
                     <p>Email: <a href="mailto:md.mamun.ur.rashid.cse@gmail.com">md.mamun.ur.rashid.cse@gmail.com</a></p>
                     <p class="phone">Phone:
-                        01880299555, 
+                        01880299555,
                         01729402303</p>
                     <p>Address: Bashundhara, Block C, Road 8, Dhaka</p>
                 </div>
                 <div class="footer-social">
-                    <a href="https://www.facebook.com/profile.php?id=100026601601848" target="_blank"><img src="images/icons8-facebook-48.png" alt="Facebook" ></a>
-                    <a href="https://www.linkedin.com/in/md-mamun-ur-rashid-7a95ab251" target="_blank"><img src="images/icons8-linkedin-48.png" alt="LinkedIn"></a>
-                    <a href="https://www.youtube.com/@MD.MamunUrRashid-vy2ej" target="_blank"><img src="images/icons8-youtube-48.png" alt="YouTube"></a>
-                    <a href="https://wa.me/+8801880299555"target="_blank"><img src="images/icons8-whatsapp-48.png" alt="WhatsApp"></a>
-                    <a href="https://github.com/MamunUrRashidAIUB"target="_blank"><img src="images/icons8-github-48.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/profile.php?id=100026601601848" target="_blank"><img
+                            src="images/icons8-facebook-48.png" alt="Facebook"></a>
+                    <a href="https://www.linkedin.com/in/md-mamun-ur-rashid-7a95ab251" target="_blank"><img
+                            src="images/icons8-linkedin-48.png" alt="LinkedIn"></a>
+                    <a href="https://www.youtube.com/@MD.MamunUrRashid-vy2ej" target="_blank"><img
+                            src="images/icons8-youtube-48.png" alt="YouTube"></a>
+                    <a href="https://wa.me/+8801880299555" target="_blank"><img src="images/icons8-whatsapp-48.png"
+                            alt="WhatsApp"></a>
+                    <a href="https://github.com/MamunUrRashidAIUB" target="_blank"><img
+                            src="images/icons8-github-48.png" alt="Instagram"></a>
                 </div>
             </div>
         </div>
