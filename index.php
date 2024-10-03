@@ -52,14 +52,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_post_id']) && 
 <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Kalnia+Glaze:wght@100..700&family=Nabla&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body id="home">
     <div class="container">
         <header>
             <div class="logo">Rashid</div>
             <button class="menu-toggle" aria-label="Open navigation menu">☰</button>
             <nav class="nav-menu">
                 <a href="#home">Home</a>
-
                 <a href="#about">About</a>
                 <a href="#testimonials">Education</a>
                 <a href="#blog">Blog</a>
@@ -117,6 +116,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_post_id']) && 
                 <p>Science</p>
                 <p>Nasirabad Govt. High School, Chattogram</p>
             </div>
+        </div>
+        <div>
+            
         </div>
 
         <!-- blog section -->

@@ -23,6 +23,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+     padding-top: 80px;
 }
 
 header {
@@ -30,7 +31,13 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
-    position: relative;
+    position: fixed; /* Fixed position */
+    top: 0; /* Sticks to the top of the page */
+    left: 20;
+    width: 80%; /* Full width */
+    background-color: #292b35; /* Same background color to match the design */
+    z-index: 1000; /* Ensures it stays above other elements */
+   
 }
 
 .logo {
