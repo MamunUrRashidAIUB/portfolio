@@ -63,8 +63,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_post_id']) && 
     <title>Rashid - Front-end Developer</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Kalnia+Glaze:wght@100..700&family=Nabla&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Kalnia+Glaze:wght@100..700&family=Nabla&display=swap"
+        rel="stylesheet">
 </head>
 
 <body id="home">
@@ -81,7 +83,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_post_id']) && 
                 <!-- Conditional Login/Logout button -->
                 <?php if ($adminLoggedIn): ?>
                     <a href="loginandlogout/logout.php" class="login-button">Logout</a>
-                <?php else: ?>
+                <?php else: ?>-
+
                     <a href="loginandlogout/login.php" class="login-button">Login</a>
                 <?php endif; ?>
             </nav>
@@ -132,64 +135,65 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_post_id']) && 
                 <p>Nasirabad Govt. High School, Chattogram</p>
             </div>
         </div>
-        
-      <!-- Education Section ends here -->
 
-<!-- Projects Section -->
-<!-- Projects Section -->
-<section id="projects" class="projects-section">
-    <h2>My Projects</h2>
-    <div class="projects-container">
-        <?php
-        require 'connection/db_connect.php';
-        
-        $query = "SELECT * FROM projects ORDER BY created_at DESC";
-        $result = mysqli_query($conn, $query);
+        <!-- Education Section ends here -->
 
-        while ($row = mysqli_fetch_assoc($result)) {
-        ?>
-            <div class="project-item">
-                <?php if (!empty($row['image'])) { ?>
-                    <img src="<?php echo $row['image']; ?>" alt="<?php echo $row['title']; ?>">
-                <?php } ?>
-                <h3><?php echo $row['title']; ?></h3>
-                <p><?php echo $row['description']; ?></p>
+        <!-- Projects Section -->
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <h2>My Projects</h2>
+            <div class="projects-container">
+                <?php
+                require 'connection/db_connect.php';
 
-                <?php if ($adminLoggedIn): ?>
-                    <!-- Delete Button -->
-                    <form method="POST" action="" style="display:inline;">
-                        <input type="hidden" name="delete_project_id" value="<?php echo $row['id']; ?>">
-                        <button type="submit" onclick="return confirm('Are you sure you want to delete this project?')">Delete</button>
-                    </form>
-                <?php endif; ?>
+                $query = "SELECT * FROM projects ORDER BY created_at DESC";
+                $result = mysqli_query($conn, $query);
+
+                while ($row = mysqli_fetch_assoc($result)) {
+                    ?>
+                    <div class="project-item">
+                        <?php if (!empty($row['image'])) { ?>
+                            <img src="<?php echo $row['image']; ?>" alt="<?php echo $row['title']; ?>">
+                        <?php } ?>
+                        <h3><?php echo $row['title']; ?></h3>
+                        <p><?php echo $row['description']; ?></p>
+
+                        <?php if ($adminLoggedIn): ?>
+                            <!-- Delete Button -->
+                            <form method="POST" action="" style="display:inline;">
+                                <input type="hidden" name="delete_project_id" value="<?php echo $row['id']; ?>">
+                                <button type="submit"
+                                    onclick="return confirm('Are you sure you want to delete this project?')">Delete</button>
+                            </form>
+                        <?php endif; ?>
+                    </div>
+                    <?php
+                }
+                ?>
             </div>
+        </section>
+
         <?php
+        if (isset($_SESSION['admin_logged_in'])) { // Only show the form if admin is logged in
+            ?>
+            <div class="project-posting">
+                <h3>Add New Project</h3>
+                <form action="add_project.php" method="POST" enctype="multipart/form-data">
+                    <label for="title">Project Title:</label>
+                    <input type="text" name="title" id="title" required>
+
+                    <label for="description">Project Description:</label>
+                    <textarea name="description" id="description" required></textarea>
+
+                    <label for="image">Project Image:</label>
+                    <input type="file" name="image" id="image">
+
+                    <button type="submit">Add Project</button>
+                </form>
+            </div>
+            <?php
         }
         ?>
-    </div>
-</section>
-
-<?php
-if (isset($_SESSION['admin_logged_in'])) { // Only show the form if admin is logged in
-?>
-    <div class="project-posting">
-        <h3>Add New Project</h3>
-        <form action="add_project.php" method="POST" enctype="multipart/form-data">
-            <label for="title">Project Title:</label>
-            <input type="text" name="title" id="title" required>
-
-            <label for="description">Project Description:</label>
-            <textarea name="description" id="description" required></textarea>
-
-            <label for="image">Project Image:</label>
-            <input type="file" name="image" id="image">
-
-            <button type="submit">Add Project</button>
-        </form>
-    </div>
-<?php
-}
-?>
 
 
         <!-- blog section -->

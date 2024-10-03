@@ -23,7 +23,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-     padding-top: 80px;
+    padding-top: 80px;
 }
 
 header {
@@ -31,13 +31,17 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
-    position: fixed; /* Fixed position */
-    top: 0; /* Sticks to the top of the page */
-    left: 20;
-    width: 80%; /* Full width */
-    background-color: #292b35; /* Same background color to match the design */
-    z-index: 1000; /* Ensures it stays above other elements */
-   
+    position: fixed;
+    /* Fixed position */
+    top: 0;
+    /* Sticks to the top of the page */
+    width: 80%;
+    /* Full width */
+    background-color: #292b35;
+    /* Same background color to match the design */
+    z-index: 1000;
+    /* Ensures it stays above other elements */
+
 }
 
 .logo {
@@ -48,7 +52,7 @@ header {
 
 .nav-menu {
     display: flex;
-    
+
 }
 
 nav a {
@@ -123,7 +127,7 @@ h1 {
     font-size: 2rem;
     /* Relative size */
     cursor: pointer;
-  
+
 }
 
 /* Media Queries for Responsiveness */
@@ -131,7 +135,7 @@ h1 {
     .nav-menu {
         display: none;
         flex-direction: column;
-        position: absolute;
+        position: fixed;
         top: 60px;
         right: 0;
         background-color: #292b35;
@@ -147,8 +151,9 @@ h1 {
 
     .menu-toggle {
         display: block;
-       
+
     }
+
     nav a {
         margin: 10px 0;
         text-align: center;
@@ -346,7 +351,7 @@ html {
         flex-direction: column;
         /* Stack items vertically on smaller screens */
         text-align: center;
-  margin-top: -250px;
+        margin-top: -250px;
         /* Center align text */
     }
 
@@ -356,9 +361,12 @@ html {
         font-size: 14px;
         /* Smaller font size for mobile */
     }
+
     .who-am-i-image {
-        margin-top: 200px; /* Adjust this value to move the image further down */
+        margin-top: 200px;
+        /* Adjust this value to move the image further down */
     }
+
     .who-am-i-image img {
 
         width: 100%;
@@ -518,6 +526,7 @@ html {
     text-decoration: none;
     /* Remove underline from links */
 }
+
 .projects-section {
     background-color: #292b35;
     padding: 40px 20px;
@@ -568,31 +577,41 @@ html {
 /* Responsive styling for project items */
 @media (max-width: 768px) {
     .projects-container {
-        flex-direction: column; /* Stack projects vertically */
-        align-items: center; /* Center align items */
+        flex-direction: column;
+        /* Stack projects vertically */
+        align-items: center;
+        /* Center align items */
     }
 
     .project-item {
-        width: 100%; /* Full width on smaller screens */
-        margin-bottom: 20px; /* Space between items */
-        padding: 15px; /* Adjust padding for a more compact layout */
-        text-align: center; /* Center text for mobile */
+        width: 100%;
+        /* Full width on smaller screens */
+        margin-bottom: 20px;
+        /* Space between items */
+        padding: 15px;
+        /* Adjust padding for a more compact layout */
+        text-align: center;
+        /* Center text for mobile */
     }
 }
 
 @media (max-width: 480px) {
     .projects-section h2 {
-        font-size: 1.5rem; /* Adjust heading size for smaller screens */
+        font-size: 1.5rem;
+        /* Adjust heading size for smaller screens */
     }
 
     .project-item h3 {
-        font-size: 1.2rem; /* Adjust project title size */
+        font-size: 1.2rem;
+        /* Adjust project title size */
     }
 
     .project-item p {
-        font-size: 0.9rem; /* Adjust project description size */
+        font-size: 0.9rem;
+        /* Adjust project description size */
     }
 }
+
 .delete-button {
     background-color: #ff4c4c;
     color: white;
