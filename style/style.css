@@ -48,6 +48,7 @@ header {
 
 .nav-menu {
     display: flex;
+    
 }
 
 nav a {
@@ -122,6 +123,7 @@ h1 {
     font-size: 2rem;
     /* Relative size */
     cursor: pointer;
+  
 }
 
 /* Media Queries for Responsiveness */
@@ -145,8 +147,8 @@ h1 {
 
     .menu-toggle {
         display: block;
+       
     }
-
     nav a {
         margin: 10px 0;
         text-align: center;
