@@ -1,16 +1,17 @@
 body {
-   
+
     margin: 0;
     padding: 0;
     background-color: #292b35;
     font-weight: 400;
     font-style: normal;
     font-variation-settings:
-    "wdth" 100;
+        "wdth" 100;
     color: seashell;
     font-family: "Roboto Mono", monospace;
-  
+
 }
+
 .bungee-spice-regular {
     font-family: "Bungee Spice", sans-serif;
     font-weight: 400;
@@ -317,6 +318,7 @@ html {
     /* Maintain aspect ratio */
     border-radius: 8px;
     /* Rounded corners */
+    margin-top: 100px;
 }
 
 .who-am-i-text {
@@ -335,6 +337,7 @@ html {
         flex-direction: column;
         /* Stack items vertically on smaller screens */
         text-align: center;
+  margin-top: -250px;
         /* Center align text */
     }
 
@@ -344,8 +347,11 @@ html {
         font-size: 14px;
         /* Smaller font size for mobile */
     }
-
+    .who-am-i-image {
+        margin-top: 200px; /* Adjust this value to move the image further down */
+    }
     .who-am-i-image img {
+
         width: 100%;
         /* Full width for images on mobile */
         height: auto;
