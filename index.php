@@ -22,6 +22,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $adminLoggedIn) {
         $stmt->close();
     }
 }
+// Handle delete project
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_project_id']) && $adminLoggedIn) {
+    $deleteProjectId = intval($_POST['delete_project_id']);
+
+    // Prepare and execute the DELETE SQL statement
+    $stmt = $conn->prepare("DELETE FROM projects WHERE id = ?");
+    $stmt->bind_param("i", $deleteProjectId);
+    $stmt->execute();
+    $stmt->close();
+
+    // Optional: Redirect to avoid form resubmission on refresh
+    header("Location: index.php");
+    exit;
+}
+
 
 // Fetch blog posts
 $sql = "SELECT * FROM blogs ORDER BY created_at DESC";
@@ -118,22 +133,64 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_post_id']) && 
             </div>
         </div>
         
-        <section id="projects" class="projects-section">
+      <!-- Education Section ends here -->
+
+<!-- Projects Section -->
+<!-- Projects Section -->
+<section id="projects" class="projects-section">
     <h2>My Projects</h2>
     <div class="projects-container">
-        <div class="project-item">
-            <img src="project1.jpg" alt="Project 1">
-            <h3>Project Title 1</h3>
-            <p>Description of project 1. Briefly explain the purpose, technologies used, and any key features.</p>
-        </div>
-        <div class="project-item">
-            <img src="project2.jpg" alt="Project 2">
-            <h3>Project Title 2</h3>
-            <p>Description of project 2. Briefly explain the purpose, technologies used, and any key features.</p>
-        </div>
-        <!-- Add more project items as needed -->
+        <?php
+        require 'connection/db_connect.php';
+        
+        $query = "SELECT * FROM projects ORDER BY created_at DESC";
+        $result = mysqli_query($conn, $query);
+
+        while ($row = mysqli_fetch_assoc($result)) {
+        ?>
+            <div class="project-item">
+                <?php if (!empty($row['image'])) { ?>
+                    <img src="<?php echo $row['image']; ?>" alt="<?php echo $row['title']; ?>">
+                <?php } ?>
+                <h3><?php echo $row['title']; ?></h3>
+                <p><?php echo $row['description']; ?></p>
+
+                <?php if ($adminLoggedIn): ?>
+                    <!-- Delete Button -->
+                    <form method="POST" action="" style="display:inline;">
+                        <input type="hidden" name="delete_project_id" value="<?php echo $row['id']; ?>">
+                        <button type="submit" onclick="return confirm('Are you sure you want to delete this project?')">Delete</button>
+                    </form>
+                <?php endif; ?>
+            </div>
+        <?php
+        }
+        ?>
     </div>
 </section>
+
+<?php
+if (isset($_SESSION['admin_logged_in'])) { // Only show the form if admin is logged in
+?>
+    <div class="project-posting">
+        <h3>Add New Project</h3>
+        <form action="add_project.php" method="POST" enctype="multipart/form-data">
+            <label for="title">Project Title:</label>
+            <input type="text" name="title" id="title" required>
+
+            <label for="description">Project Description:</label>
+            <textarea name="description" id="description" required></textarea>
+
+            <label for="image">Project Image:</label>
+            <input type="file" name="image" id="image">
+
+            <button type="submit">Add Project</button>
+        </form>
+    </div>
+<?php
+}
+?>
+
 
         <!-- blog section -->
         <div class="projects" id="blog">

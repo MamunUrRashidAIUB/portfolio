@@ -574,3 +574,15 @@ html {
         width: 100%;
     }
 }
+.delete-button {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #d43f3f;
+}
