@@ -563,15 +563,32 @@ html {
     line-height: 1.6;
 }
 
-/* Responsive styling */
+/* Responsive styling for project items */
 @media (max-width: 768px) {
     .projects-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Stack projects vertically */
+        align-items: center; /* Center align items */
     }
 
     .project-item {
-        width: 100%;
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px; /* Space between items */
+        padding: 15px; /* Adjust padding for a more compact layout */
+        text-align: center; /* Center text for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-section h2 {
+        font-size: 1.5rem; /* Adjust heading size for smaller screens */
+    }
+
+    .project-item h3 {
+        font-size: 1.2rem; /* Adjust project title size */
+    }
+
+    .project-item p {
+        font-size: 0.9rem; /* Adjust project description size */
     }
 }
 .delete-button {
