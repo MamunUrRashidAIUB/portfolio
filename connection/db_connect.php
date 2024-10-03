@@ -1,7 +1,7 @@
 <?php
-$servername = "localhost"; // or your server name
-$username = "root";
-$password = "";
+$servername = "sql101.infinityfree.com"; // or your server name
+$username = "if0_37435221";
+$password = "Rashid2285";
 $dbname = "myportfolio"; // your database name
 
 // Create connection
