@@ -8,7 +8,7 @@ if (!isset($_SESSION['blog_posts'])) {
     $_SESSION['blog_posts'] = [];
 }
 
-// Handle new blog post submission
+
 // Handle new blog post submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $adminLoggedIn) {
     $newTitle = isset($_POST['new_blog_title']) ? htmlspecialchars($_POST['new_blog_title']) : '';
@@ -117,9 +117,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_post_id']) && 
                 <p>Nasirabad Govt. High School, Chattogram</p>
             </div>
         </div>
-        <div>
-            
+        
+        <section id="projects" class="projects-section">
+    <h2>My Projects</h2>
+    <div class="projects-container">
+        <div class="project-item">
+            <img src="project1.jpg" alt="Project 1">
+            <h3>Project Title 1</h3>
+            <p>Description of project 1. Briefly explain the purpose, technologies used, and any key features.</p>
         </div>
+        <div class="project-item">
+            <img src="project2.jpg" alt="Project 2">
+            <h3>Project Title 2</h3>
+            <p>Description of project 2. Briefly explain the purpose, technologies used, and any key features.</p>
+        </div>
+        <!-- Add more project items as needed -->
+    </div>
+</section>
 
         <!-- blog section -->
         <div class="projects" id="blog">
