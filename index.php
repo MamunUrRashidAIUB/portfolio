@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_post_id']) && 
                 </div>
                 <div class="who-am-i-text">
 
-                    <p>I am Mamun Ur Rashid, currently pursuing my degree in Computer Science and Engineering (CSE) at
+                    <p><h1>Hi, I'm Mamun Ur Rashid</h1>i'm currently pursuing my degree in Computer Science and Engineering (CSE) at
                         American International University, where I’m in my 9th semester. I have a deep passion for
                         technology and always strive to learn and explore new concepts within CSE. My interests span a
                         wide range, from app and website design, where I utilize Figma for creative interfaces, to
@@ -94,11 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_post_id']) && 
                 </div>
             </div>
         </div>
-        <!-- <div class="projects" id="testimonials">
-            <h2>EDUCATION </h2>
-            <p>Bachelor Degree of Computer Science</p>
-            <p>American International University Bangladesh</p>
-        </div> -->
+      
         <div class="education-section" id="testimonials">
             <h2>Education</h2>
             <div class="education-item">
