@@ -198,40 +198,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_post_id']) && 
 
         <!-- blog section -->
         <div class="projects" id="blog">
-            <h2>Blog</h2>
-            <?php if ($adminLoggedIn): ?>
-                <div class="blog-posting">
-                    <h3>Post a New Blog</h3>
-                    <form method="POST" action="">
-                        <input type="text" name="new_blog_title" placeholder="Blog Title" required><br><br>
-                        <textarea name="new_blog_post" placeholder="Type your blog post here..." required></textarea>
-                        <button type="submit">Post Blog</button>
-                    </form>
-                </div>
-            <?php endif; ?>
-
-            <?php if ($result->num_rows > 0): ?>
-                <?php while ($row = $result->fetch_assoc()): ?>
-                    <div class="blog-post">
-                        <h3><?php echo htmlspecialchars($row['title']); ?></h3>
-                        <p><?php echo nl2br(htmlspecialchars($row['content'])); ?></p>
-                        <small>Posted on: <?php echo $row['created_at']; ?></small>
-
-                        <?php if ($adminLoggedIn): ?>
-                            <!-- Delete Button -->
-                            <form method="POST" action="" style="display:inline;">
-                                <input type="hidden" name="delete_post_id" value="<?php echo $row['id']; ?>">
-                                <button type="submit"
-                                    onclick="return confirm('Are you sure you want to delete this blog post?')">Delete</button>
-                            </form>
-                        <?php endif; ?>
-                    </div>
-                <?php endwhile; ?>
-            <?php else: ?>
-                <p>No blog posts available.</p>
-            <?php endif; ?>
-
+    <h2>Blog</h2>
+    <?php if ($adminLoggedIn): ?>
+        <div class="blog-posting">
+            <h3>Post a New Blog</h3>
+            <form method="POST" action="">
+                <input type="text" name="new_blog_title" placeholder="Blog Title" required><br><br>
+                <textarea name="new_blog_post" placeholder="Type your blog post here..." required></textarea>
+                <button type="submit">Post Blog</button>
+            </form>
         </div>
+    <?php endif; ?>
+
+    <!-- Fetch blog posts here -->
+    <?php
+    $sql = "SELECT * FROM blogs ORDER BY created_at DESC"; // Ensure the query is right before use
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0): ?>
+        <?php while ($row = $result->fetch_assoc()): ?>
+            <div class="blog-post">
+                <h3><?php echo htmlspecialchars($row['title']); ?></h3>
+                <p><?php echo nl2br(htmlspecialchars($row['content'])); ?></p>
+                <small>Posted on: <?php echo $row['created_at']; ?></small>
+
+                <?php if ($adminLoggedIn): ?>
+                    <!-- Delete Button -->
+                    <form method="POST" action="" style="display:inline;">
+                        <input type="hidden" name="delete_post_id" value="<?php echo $row['id']; ?>">
+                        <button type="submit"
+                            onclick="return confirm('Are you sure you want to delete this blog post?')">Delete</button>
+                    </form>
+                <?php endif; ?>
+            </div>
+        <?php endwhile; ?>
+    <?php else: ?>
+        <p>No blog posts available.</p>
+    <?php endif; ?>
+</div>
+
         <!-- blog section end -->
         <!-- Replace this section -->
         <div class="footer" id="contact">
