@@ -186,7 +186,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_post_id']) && 
                     <textarea name="description" id="description" required></textarea>
 
                     <label for="image">Project Image:</label>
-                    <input type="file" name="image" id="image">
+                    <input type="file" name="image" id="image"><br>
+                    <label for="link">Link</label>
+                    <input type="text" name="link" id="link">
 
                     <button type="submit">Add Project</button>
                 </form>
